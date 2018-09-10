@@ -1,0 +1,133 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
+for details on configuring this project to bundle and minify static web assets. */
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+.nav-profile {
+    width:48px;
+}
+
+.navbar-logout {
+    color: white !important;
+    font-size: 14px;
+}
+
+.arrow {
+    padding-top: 3px;
+}
+
+.h50 {
+    height: 50px;
+}
+
+.rightside-detail .list-group-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: -7px;
+}
+
+.rightside-detail .pull-left {
+    font-weight: 700;
+}
+
+.edit-layout {
+    margin-bottom: 3px !important;
+}
+
+textarea {
+    resize: none;
+    min-height:100px;
+}
+
+    textarea.form-control {
+        min-height:200px;
+    }
+
+.link-label {
+    min-width: 30px;
+    width: 15%;
+    margin-top: 8px;
+}
+
+.link {
+    width: 80%;
+}
+
+.link input {
+    font-size: 12px;
+}
+
+.details-page pre {
+    max-height:300px;
+}
+
+.details-page dt, .details-page dl {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1290px) {
+    .poster-index .small-wrap {
+        white-space: normal !important;
+    }
+}
+
+.responsive-table {
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 1090px) {
+    .poster-index table th:nth-of-type(3), .poster-index table td:nth-of-type(3),
+    .poster-index table th:nth-of-type(5), .poster-index table td:nth-of-type(5),
+    .poster-index table th:nth-of-type(7), .poster-index table td:nth-of-type(7),
+    .poster-index table th:nth-of-type(8), .poster-index table td:nth-of-type(8) {
+        display: none;
+    }
+}
+
+/*UNDONE: Issues with box shadow */
+.md-skin .navbar-static-side {
+    box-shadow: none;
+}
+
+/*.md-skin .navbar-default {
+    height:100%;
+}*/
+
+/*#wrapper {
+    height: 100%;
+}*/
+
+/*UNDONE: Code end*/
+
+.dashboard .timeline-item .content {
+    padding-top:5px;
+}
+
+.dashboard .badge {
+    padding-top: 5px;
+    padding-bottom: 4px;
+}
+
+.md-skin .ibox-title h5 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.img-author {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    /*border-top: 1px solid #eee;*/
+    border-bottom: 1px solid #eee;
+}
+
+.rightside-detail > *:last-child {
+    margin-bottom:0;
+}
+
+.fa-info-circle[data-toggle] {
+    vertical-align: -1px;
+}

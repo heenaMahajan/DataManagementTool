@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using DataManagementTool.Data;
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <li>
+        <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm">
+
+           
+            <span class="m-r-sm text-muted welcome-message" data-i18n="topnav.welcometext">@UserManager.GetUserAsync(User).Result.Name</span>
+
+            <i class="fa fa-sign-out-alt navbar-logout m-l-sm"></i><button type="submit" class="btn-link navbar-link navbar-logout">Logout</button>
+        </form>
+    </li>
+}
+else
+{
+
+    <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+    <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+}

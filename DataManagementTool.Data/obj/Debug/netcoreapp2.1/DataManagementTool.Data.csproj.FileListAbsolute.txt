@@ -1,0 +1,17 @@
+F:\DataManagementTool\DataManagementTool\DataManagementTool.Data\bin\Debug\netcoreapp2.1\DataManagementTool.Data.deps.json
+F:\DataManagementTool\DataManagementTool\DataManagementTool.Data\bin\Debug\netcoreapp2.1\DataManagementTool.Data.dll
+F:\DataManagementTool\DataManagementTool\DataManagementTool.Data\bin\Debug\netcoreapp2.1\DataManagementTool.Data.pdb
+F:\DataManagementTool\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.csprojAssemblyReference.cache
+F:\DataManagementTool\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.csproj.CoreCompileInputs.cache
+F:\DataManagementTool\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.AssemblyInfoInputs.cache
+F:\DataManagementTool\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.AssemblyInfo.cs
+F:\DataManagementTool\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.dll
+F:\DataManagementTool\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.pdb
+D:\DataManagementTool\DataManagementTool.Data\bin\Debug\netcoreapp2.1\DataManagementTool.Data.deps.json
+D:\DataManagementTool\DataManagementTool.Data\bin\Debug\netcoreapp2.1\DataManagementTool.Data.dll
+D:\DataManagementTool\DataManagementTool.Data\bin\Debug\netcoreapp2.1\DataManagementTool.Data.pdb
+D:\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.csproj.CoreCompileInputs.cache
+D:\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.AssemblyInfoInputs.cache
+D:\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.AssemblyInfo.cs
+D:\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.dll
+D:\DataManagementTool\DataManagementTool.Data\obj\Debug\netcoreapp2.1\DataManagementTool.Data.pdb

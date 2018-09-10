@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-8">
+        <h2>Manage Clients</h2>
+        <ol class="breadcrumb">
+            <li>
+                Home
+            </li>
+            <li class="active">
+                <strong>Manage Clients</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-sm-4">
+        <div class="title-action">
+            <a asp-controller="Client" asp-action="CreateClientView" class="btn btn-primary">Create New</a>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12 ibox ibox-content" id="clientList">
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/customJs/ManageClient.js"></script>
+}

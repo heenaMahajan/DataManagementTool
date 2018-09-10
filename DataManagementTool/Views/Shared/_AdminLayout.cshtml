@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Data Management Tool</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Add local styles, mostly for plugins css file -->
+    @if (IsSectionDefined("Styles"))
+    {@RenderSection("Styles", required: false)}
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" />
+        <link rel="stylesheet" href="~/lib/select2_4.0.0/select2.min.css" />
+        <link rel="stylesheet" href="~/css/admin-site.css" />
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/redmond/jquery-ui.css" />
+        <link href="~/css/developer.css" rel="stylesheet" />
+        <link href="~/css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+        <link href="~/css/animate.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/lib/select2_4.0.0/select2.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/admin-site.css" asp-append-version="true" />
+        <link href="~/css/pqselect.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/redmond/jquery-ui.css" />
+        <link href="~/css/developer.css" rel="stylesheet" />
+        <link href="~/css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+        <link href="~/css/animate.css" rel="stylesheet" />
+    </environment>
+
+</head>
+<body class="@if (!User.Identity.IsAuthenticated) { @Html.Raw("mini-navbar") } md-skin">
+
+    <!-- Wrapper-->
+    <div id="wrapper" style="overflow-x:scroll;">
+
+        <!-- Navigation -->
+        <partial name="_AdminNavigation" />
+
+        <!-- Page wraper -->
+        <div id="page-wrapper" class="gray-bg">
+
+            <!-- Top Navbar -->
+            <partial name="_AdminTopNavbar" />
+
+            <!-- Main view  -->
+            @RenderBody()
+            <div style="z-index: 999999" id="snackbar"></div>
+            <!-- Footer -->
+            <partial name="_AdminFooter" />
+
+        </div>
+        <!-- End page wrapper-->
+        <!-- Right Sidebar -->
+        <partial name="_AdminRightSidebar" />
+
+    </div>
+    <!-- End wrapper-->
+
+    <environment names="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"></script>
+        <script src="~/js/jquery.unobtrusive-ajax.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/metisMenu_2.7.7/jquery.metisMenu.js"></script>
+        <script src="~/lib/slimScroll_1.3.8/jquery.slimscroll.js"></script>
+        <script src="~/lib/pace_1.0.2/pace.min.js"></script>
+        <script src="~/lib/select2_4.0.0/select2.full.min.js"></script>
+        <script src="~/js/inspinia.js"></script>
+        <script src="~/js/site.js"></script>
+        <script src="~/lib/dataTables/datatables.min.js"></script>
+        <script src="~/lib/dataTables/dataTables.bootstrap4.min.js"></script>
+        <script src="~/lib/sweetalert/sweetalert.min.js"></script>
+    </environment>
+
+    <environment exclude="Development">
+
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="~/js/jquery.unobtrusive-ajax.js"></script>
+        @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.10/jquery.validate.unobtrusive.js"></script>*@
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/lib/metisMenu_2.7.7/jquery.metisMenu.js" asp-append-version="true"></script>
+        <script src="~/lib/slimScroll_1.3.8/jquery.slimscroll.js" asp-append-version="true"></script>
+        <script src="~/lib/pace_1.0.2/pace.min.js" asp-append-version="true"></script>
+        <script src="~/lib/select2_4.0.0/select2.full.min.js" asp-append-version="true"></script>
+        <script src="~/js/inspinia.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/lib/dataTables/datatables.min.js"></script>
+        <script src="~/lib/dataTables/dataTables.bootstrap4.min.js"></script>
+        <script src="~/lib/sweetalert/sweetalert.min.js"></script>
+
+    </environment>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

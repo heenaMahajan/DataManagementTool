@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using DataManagementTool.Models;
+@model List<ClientViewModel>
+@{
+    ViewData["Title"] = "Index";
+
+}
+<div class="ibox-content" id="clientDetails">
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover dataTables-example" id="clientTable">
+            <thead>
+                <tr>
+                    <th style="display:none"></th>
+                    <th width="25%">Name </th>
+                    <th width="25%">Email </th>
+                    <th width="25%">Address Street </th>
+                    <th width="15%">Company</th>
+                    <th width="10%">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @foreach (ClientViewModel client in Model)
+                    {
+                        <tr id="row_@client.Id">
+                            <td style="display: none" id="tdUserId">@client.Id</td>
+                            <td width="25%" id="tdName">@client.Name</td>
+                            <td width="25%" id="tdEmail">@client.Email</td>
+                            <td width="25%" id="tdCompany">@client.AddressStreet</td>
+                            <td width="15%" id="tdRoles">@client.Company</td>
+                            <td width="10%">
+                                <a class="fa fa-edit"  asp-route-id="@client.Id" asp-action="EditClient" asp-controller="Client" title="Edit"></a>
+                                <a class="fa fa-trash-alt" data-id="@client.Id" onclick="customClientList.deleteClient(this);"  title="Delete"></a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/dataTables/datatables.min.js"></script>
+    <script src="~/lib/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/js/customJs/ManageClient.js"></script>
+}
+
+
+
